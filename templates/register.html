@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div id="background"></div>
+    <div class="container">
+        <div id="register-form" class="form active">
+            <h2>Регистрация</h2>
+            <form action="/register" method="POST">
+                <label for="register-username">Имя пользователя:</label>
+                <input type="text" id="register-username" name="username" required>
+
+                <label for="register-password">Пароль:</label>
+                <input type="password" id="register-password" name="password" required>
+
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+            <p>Уже зарегистрированы? <a href="/">Войти</a></p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="static/script.js"></script>
+</body>
+</html>
