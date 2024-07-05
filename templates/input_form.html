@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма ввода данных</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div id="background"></div>
+    <div class="container">
+        <div id="input-form" class="form active">
+            <h2>Форма ввода данных</h2>
+            <form action="/calculate" method="POST">
+                <label for="input-n">N:</label>
+                <input type="text" id="input-n" name="n" required>
+
+                <label for="input-v">V:</label>
+                <select id="input-v" name="v" required>
+                    <option value="Rузловая">Rузловая</option>
+                    <option value="Nc">Nc</option>
+                </select>
+
+                <label for="input-e">Формула E = H/R (выбор rmin или rmax):</label>
+                <select id="input-e" name="e" required>
+                    <option value="rmin">rmin</option>
+                    <option value="rmax">rmax</option>
+                </select>
+
+                <button type="submit">Вычислить</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="static/script.js"></script>
+</body>
+</html>

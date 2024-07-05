@@ -5,7 +5,7 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('background').appendChild(renderer.domElement);
 
-// Создание  материала для куба и самого куба
+// Создание материала для куба и самого куба
 const geometry = new THREE.BoxGeometry(23, 23, 23, 20, 20, 20);
 const material = new THREE.MeshBasicMaterial({ color: 0x0077ff, wireframe: true });
 const cube = new THREE.Mesh(geometry, material);
@@ -46,3 +46,4 @@ document.getElementById('show-login').addEventListener('click', function() {
     document.getElementById('register-form').classList.remove('active');
     document.getElementById('login-form').classList.add('active');
 });
+

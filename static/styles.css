@@ -32,12 +32,12 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-label, input {
+label, input, select {
     display: block;
     margin-bottom: 10px;
 }
 
-input {
+input, select {
     width: 100%;
     padding: 10px;
     border: none;
@@ -56,4 +56,14 @@ button {
 
 button:hover {
     background: #2980b9;
+}
+
+.result-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
 }

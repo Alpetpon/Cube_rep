@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генерация значения r и расчет объема куба</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div id="background"></div>
+    <div class="container">
+        <div id="r-form" class="form active">
+            <h2>Генерация значения r и расчет объема куба</h2>
+            <form action="/generate_r" method="POST">
+                <label for="distribution">Распределение:</label>
+                <select id="distribution" name="distribution" required>
+                    <option value="random">Рандомное распределение</option>
+                    <option value="gaussian">Распределение Гаусса</option>
+                    <option value="uniform">Равномерное распределение</option>
+                </select>
+
+                <label for="input-x">x:</label>
+                <input type="text" id="input-x" name="x" required>
+
+                <label for="input-y">y:</label>
+                <input type="text" id="input-y" name="y" required>
+
+                <label for="input-z">z:</label>
+                <input type="text" id="input-z" name="z" required>
+
+                <button type="submit">Рассчитать</button>
+            </form>
+
+            {% if r is not none and result is not none and volume is not none %}
+            <div class="result-box">
+                <h3>Результаты:</h3>
+                <p>Сгенерированное значение r: {{ r }}</p>
+                <p>Результат E: {{ result }}</p>
+                <p>Объем куба: {{ volume }}</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="static/script.js"></script>
+</body>
+</html>
